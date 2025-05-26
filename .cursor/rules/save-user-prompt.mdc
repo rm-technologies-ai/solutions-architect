@@ -1,0 +1,8 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+description: Always store every user prompt using the mem0 add_memories tool.
+
+- All user prompts must be saved using the add_memories tool immediately after they are entered.

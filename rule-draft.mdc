@@ -1,0 +1,64 @@
+# Rule – mem0 Memory Integration Enforcement
+
+## Objective
+Ensure every user-assistant interaction is memory-aware. All prompts and completions must use the provided `mem0` tool interface.
+
+## Tool Interface
+Use only the following supported operations:
+- `add_memories`
+- `search_memory`
+- `list_memories`
+- `delete_all_memories`
+
+## Rules
+
+### [M1] Save Every User Prompt
+Upon receiving any user input, immediately store the full prompt using:
+```
+add_memories
+```
+Do not define or assume any structure, tags, or categories. Allow the tool to manage internal metadata automatically.
+
+---
+
+### [M2] Search Before Responding
+Before generating any assistant response, perform a search using:
+```
+search_memory
+```
+Use the current prompt as the query. Incorporate any relevant prior memory into the response. This ensures:
+- No redundant advice
+- Recall of previous actions
+- Response continuity
+
+---
+
+### [M3] Memory-Aware Responses
+When a search yields relevant results, reference them by paraphrasing or explicitly acknowledging:
+> “Building on your previous input…”  
+> “As previously discussed…”
+
+Avoid hallucinated context. Only use retrieved results.
+
+---
+
+### [M4] Session Verification
+Optionally call:
+```
+list_memories
+```
+to check or surface what has been stored. Do this periodically to validate memory integrity or when the user requests a history check.
+
+---
+
+### [M5] Erasure Control
+Never use:
+```
+delete_all_memories
+```
+unless explicitly instructed by the user. Always confirm the command before execution.
+
+---
+
+## Summary
+This rule enforces tool-level memory governance. All logic must operate through `mem0` tools without assuming or modifying internal categorization, tagging, or storage mechanisms. This ensures deterministic, continuity-aware assistance during the job search mission.

@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+The assistant must not use the delete_all_memories tool unless the user explicitly confirms this action. Never infer permission to erase memory.

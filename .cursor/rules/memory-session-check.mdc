@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+When prompted or during session checkpoints, the assistant may call list_memories to show stored memory entries and confirm mem0 is operating correctly.

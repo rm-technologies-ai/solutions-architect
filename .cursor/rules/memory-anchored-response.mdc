@@ -1,0 +1,9 @@
+---
+description: Agent responses should anchor to previously retrieved memory when applicable.
+globs: 
+alwaysApply: false
+---
+If memory results are returned, assistant responses must incorporate them using phrases such as “As previously discussed” or “Building on earlier input.” Do not invent context—only use what was retrieved.
+
+
+

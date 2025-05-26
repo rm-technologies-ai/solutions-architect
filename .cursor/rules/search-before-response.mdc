@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Before the assistant responds, it must call the search_memory tool using the current prompt as the query. Any relevant results must guide or shape the assistant's reply.
