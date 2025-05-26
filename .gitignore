@@ -1,0 +1,42 @@
+# macOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+
+# Node.js dependencies
+node_modules/
+
+# Python virtual environments
+venv/
+*.pyc
+
+# SFDX configuration and local org data
+.sfdx/
+.sf/
+.localdevserver/
+
+# VS Code settings
+.vscode/
+
+# IntelliJ IDEA settings
+.idea/
+
+# Eclipse settings
+.project
+.settings/
+.salesforce/
+
+# Build artifacts and logs
+coverage/
+build/
+*.log
+
+# Environment and configuration files
+.env
+.env.local
+*.local
+
+# Temporary files
+*.swp
+*.tmp
